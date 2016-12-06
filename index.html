@@ -9,45 +9,69 @@
 <body>
 
 	<header>
-         
-      <ul>
-  <li><a href="#home">Accueil</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Notre histoire</a>
-    <div class="dropdown-content">
-      <a href="histoire/la_mariee.html">La mariée</a>
-      <a href="histoire/le_marie.html">Le marié</a>
-      <a href="histoire/notre_rencontre.html">Notre rencontre</a>
-      <a href="histoire/nos_familles.html">Nos familles</a>      
-    </div>
-  </li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Notre mariage</a>
-    <div class="dropdown-content">
-     <a href="#">Programme</a>
-      <a href="#">Les témoins</a>
-      <a href="#">Liste des invités</a>
-      <a href="#">Livre d'or</a>      
-    </div>
-  </li>
-  <li><a href="#home">Albums photo</a></li>
-			<li><a href="#home">Informations</a></li>
-			<li><a href="#home">Contact</a></li> 
-</ul>
-	</header>
 
-	<div class="content">
-		<h1>Le mariage de Emy et Loik</h1>
-		<h2>J - 226</h2>
-		<h2>14 Juillet 2017</h2>
-		<h2>Bienvenue à notre mariage!</h2>
+    <ul>
+      <li><a href="#home">Accueil</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Notre histoire</a>
+        <div class="dropdown-content">
+          <a href="histoire/la_mariee.html">La mariée</a>
+          <a href="histoire/le_marie.html">Le marié</a>
+          <a href="histoire/notre_rencontre.html">Notre rencontre</a>
+          <a href="histoire/nos_familles.html">Nos familles</a>      
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Notre mariage</a>
+        <div class="dropdown-content">
+         <a href="#">Programme</a>
+         <a href="#">Les témoins</a>
+         <a href="#">Liste des invités</a>
+         <a href="#">Livre d'or</a>      
+       </div>
+     </li>
+     <li><a href="#home">Albums photo</a></li>
+     <li><a href="#home">Informations</a></li>
+     <li><a href="#home">Contact</a></li> 
+   </ul>
+ </header>
 
-		<p>Ce site vous permettra de retrouver toutes les informations sur ce magnifique événement qui nous attend.</p>
+ <div class="content">
+  
+  <div class="cadre">
+    <em>
+      <div id="compteur"></div>
+      <div id="date"><strong>14 Juillet 2017</strong></div>
+    </em>
+  </div>
 
-		<p>Vous pouvez nous contacter si besoin par l’intermédiaire de ce site (ou par téléphone, ça marche aussi ;) )</p>
+  <h1>Le mariage de Emy et Loik</h1>
 
-		<p>N'hésitez pas à laisser un petit message dans notre livre d'or.</p>
-	</div>
+  <h2>Bienvenue à notre mariage!</h2>
 
+  <p>Ce site vous permettra de retrouver toutes les informations sur ce magnifique événement qui nous attend.</p>
+
+  <p>Vous pouvez nous contacter si besoin par l’intermédiaire de ce site (ou par téléphone, ça marche aussi ;) )</p>
+
+  <p>N'hésitez pas à laisser un petit message dans notre livre d'or.</p>
+</div>
+
+
+
+<script type="text/JavaScript">
+var Affiche=document.getElementById("compteur");
+function Rebour() {
+  var date1 = new Date();
+  var date2 = new Date(Date.parse("July 14, 2017"));
+  var sec = (date2 - date1) / 1000;
+  var n = 24 * 3600;
+  if (sec > 0) {
+    j = Math.floor (sec / n);
+    Affiche.innerHTML = "J - " + j ;
+  }
+  tRebour=setTimeout ("Rebour();", 1000);
+}
+Rebour();
+</script>
 </body>
 </html>

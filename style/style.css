@@ -108,3 +108,11 @@ li.dropdown {
     padding: 20px;
 
 }
+
+.cadre {
+    border-bottom: 1px solid #FFE5CC;
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.35) inset;
+    float: right;
+    padding: 20px;
+    font-size: x-large;
+}
