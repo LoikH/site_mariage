@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../style/style.css" />
+	<title>Mariage de Emy et Loik - 14 Juillet 2017</title>
+</head>
+
+<body>
+
+	<header>
+
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Notre histoire</a>
+        <div class="dropdown-content">
+          <a href="../histoire/la_mariee.html">La mariéee</a>
+          <a href="../histoire/le_marie.html">Le marié</a>
+          <a href="../histoire/notre_rencontre.html">Notre rencontre</a>
+          <a href="../histoire/nos_familles.html">Nos familles</a>      
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Notre mariage</a>
+        <div class="dropdown-content">
+         <a href="programme.html">Programme</a>
+         <a href="temoins.html">Les témoins</a>
+         <a href="livre_or.html">Livre d'or</a>      
+       </div>
+     </li>
+     <li><a href="#">Albums photo</a></li>
+     <li><a href="#">Informations</a></li>
+     <li><a href="#">Contact</a></li> 
+   </ul>
+ </header>
+
+ <div class="content">
+  
+  <div class="cadre">
+    <em>
+      <div id="compteur"></div>
+      <div id="date"><strong>14 Juillet 2017</strong></div>
+    </em>
+  </div>
+
+  <h1>Nos témoins</h1>
+  
+  <h2>A la mairie</h2>
+  <h3>François-Xavier dit FX</h3>
+  <p>Le marié le connais depuis la 6ème, inutile de dire qu'ils en ont fait des bétises ensembles ;)</p>
+  <img src="../images/fx.jpg" width="300"/>
+  
+  <h3>Alexis</h3>
+  <p>Ami des mariés depuis qu'ils sont ensemble. Il a eu la gentillesse de vous faire une petite vidéo de présentation ci-dessous (un grand merci à lui)</p>
+  <video controls src="../video/alexis.mp4" width="300">Alexis</video>
+  
+  <h3>Alexandra</h3>
+  <p>Amie de la mariée depuis une dizaine d'année, elle ne se quitte plus.</p>
+  <img src="../images/alexandra.jpg" width="300"/>
+  
+  <h3>Anais</h3>
+  <p>Amie des mariés depuis qu'elle est la compagne de Max.</p>
+  <img src="../images/anais.jpg" width="300"/>
+  
+  <h2>A la cérémonie</h2>
+    
+  <h3>Joey</h3>
+  <p>Frère de la mariée, et compagnon de jeux vidéo pour le marié. Il ne pouvait pas raté cet évènement !</p>
+  <img src="../images/joey.jpg" width="300"/>
+  
+  <h3>Tanguy</h3>
+  <p>Ami breton du marié depuis la fac, ils ont vadrouillés ensemble pendant plusieurs années.</p>
+  <img src="../images/tanguy.jpg" width="300"/>
+
+  <h3>Chris</h3>
+  <p>Ami du marié depuis le collège et toujours coéquipié au foot, ils ont aussi passé de nombreuses vacances ensemble.</p>
+  <img src="../images/chris.jpg" width="300"/>
+  
+  <h3>Sophie</h3>
+  <p>Amie des mariés et compagne de Tanguy.</p>
+  <img src="../images/sophie.jpg" width="300"/>
+  
+  <h3>Alexandra et Anais</h3>
+  <p>Alexandra et Anais sont également demoiselles d'honneur à la cérémonie.</p>
+
+</div>
+
+
+
+<script type="text/JavaScript">
+var Affiche=document.getElementById("compteur");
+function Rebour() {
+  var date1 = new Date();
+  var date2 = new Date(Date.parse("July 14, 2017"));
+  var sec = (date2 - date1) / 1000;
+  var n = 24 * 3600;
+  if (sec > 0) {
+    j = Math.floor (sec / n);
+    Affiche.innerHTML = "J - " + j ;
+  }
+  tRebour=setTimeout ("Rebour();", 1000);
+}
+Rebour();
+</script>
+</body>
+</html>
